@@ -16,9 +16,9 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(window.innerWidth * 0.85, window.innerHeight * 0.85)
 renderer.setPixelRatio(window.devicePixelRatio)
 
-camera.position.z += -4
-camera.position.y += 2
-camera.position.x += -3
+camera.position.z += -10.132760291028331
+camera.position.y += 8.323648018048944
+camera.position.x += -11.620048095997191
 
 window.addEventListener('resize', function () {
   renderer.setSize(this.window.innerWidth, this.window.innerHeight)
@@ -29,13 +29,11 @@ window.addEventListener('resize', function () {
 const controls = new THREE.OrbitControls(camera, canvas)
 
 const loader = new THREE.GLTFLoader().load('bunga.gltf', function (result) {
-  const brawn_gp = result.scene.children[0]
-  brawn_gp.castShadow = true
-  brawn_gp.scale.set(11, 11, 11)
-  scene.add(brawn_gp)
+  const gltfScene = result.scene
+  scene.add(gltfScene)
 })
 
-const hlight = new THREE.AmbientLight(0xffffff, 1)
+const hlight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 1.2)
 scene.add(hlight)
 
 function updateScene() {
