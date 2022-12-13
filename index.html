@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./threelib/three.min.js"></script>
+    <script src="./threelib/controls/OrbitControls.js"></script>
+    <script src="./loaders/GLTFLoader.js"></script>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Hana No Tou - Zydhan Linnar Putra</title>
+    <meta property="og:title" content="Hana No Tou - Zydhan Linnar Putra" />
+    <meta
+      property="og:description"
+      content="Hana No Tou - Zydhan Linnar Putra"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hana-no-tou.zydhan.com/" />
+  </head>
+  <body>
+    <div
+      class="bg-gray-800 flex flex-col items-center justify-center min-h-screen py-2 pt-10"
+    >
+      <main
+        class="flex flex-col items-center justify-center w-full flex-1 px-20 text-center"
+      >
+        <h1 class="text-6xl font-bold text-white">Hana No Tou</h1>
+
+        <p class="mt-3 text-xl text-gray-400 font-semibold mb-5">
+          Tower of Flower (But there is no actual tower)
+        </p>
+
+        <canvas
+          id="canvas"
+          class="w-screen lg:w-5/6 xl:w-3/4 lg:ring-1 rounded-lg mt-3 ring-gray-700"
+        ></canvas>
+      </main>
+      <footer class="flex items-center justify-center w-full h-10">
+        <small class="text-base text-gray-400 text-opacity-80 font-semibold">
+          Zydhan Linnar Putra
+        </small>
+      </footer>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>
